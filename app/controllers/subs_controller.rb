@@ -114,6 +114,10 @@ class SubsController < ApplicationController
     # redirect_to root_path
   end
   private 
+    # { sub: { title: 'title' } }
+    # { sub: { title: '' } }
+    # { sub: { title: '', age: 23, address: 'dasfasdf' } }
+    # { sub: { title: 'SELECT*FROMUSERs', SELECT*FROMUSERs } }
     def sub_params
       params.require(:sub).permit(:title)
     end
